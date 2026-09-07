@@ -1,16 +1,19 @@
-export default function LayOut({children}){
- metadata=[{
-    title:"Nova_calc",
-    description:"this is a responsive and useable application"
- }]
-  return(
-<html lang="en">
+import Navbar from "@/components/Navbar";
+import "./globals.css";
 
-<body>
-  <main>
-    {children}
-  </main>
-</body>
-</html>
-  )
-}
+export const metadata = {
+  title: "Nova Calc",
+  description: "A simple and powerful calculator application.",
+};
+
+export default function Layout({children}){
+ 
+  return (
+    <html lang="en">
+      <body className="min-h-screen bg-zinc-950 text-white antialiased">
+        <Navbar />
+        {children}
+      </body>
+    </html>
+  );
+  }

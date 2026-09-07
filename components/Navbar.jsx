@@ -30,7 +30,7 @@ export default function Navbar() {
           <div className="hidden sm:block">
             <p className="text-sm font-semibold tracking-wide">CALCX</p>
             <p className="text-[10px] uppercase tracking-[0.25em] text-zinc-500">
-              Smart Calculator
+            Novacalc
             </p>
           </div>
         </Link>
