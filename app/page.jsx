@@ -247,6 +247,11 @@ return(
           </Link>
         </div>
       </section>
+      <div className="mt-10 flex items-center gap-4 text-sm text-zinc-500">
+<span>
+  Bild for percisions
+</span>
+      </div>
 
       {/* Footer */}
       <footer className="border-t border-white/10 px-6 py-8 lg:px-8">
