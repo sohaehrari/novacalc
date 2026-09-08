@@ -5,7 +5,7 @@ memory:"0",
 history:[],
 }
 
-export default function Reducer(state,action){
+export default function calculatorReducer(state,action){
 switch(action.type){
     case"INPUT_NUMBER" :
     return{
