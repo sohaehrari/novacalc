@@ -1,3 +1,6 @@
+import Display from "./Display";
+import Keypad from "./Keypad";
+
 export default function Calculator(){
     return(
         <section className="mx-auto w-full mx-w-md">
