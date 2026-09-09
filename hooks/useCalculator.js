@@ -17,6 +17,20 @@ export default function useCalculator(){
         });
     }
 
+    const inputOpretator=(operator)=>{
+        dispatch({
+            type:"INPUT_OPERATOR",
+            payload:operator
+        });
+    }
+
+    const calculate=()=>{
+        dispatch({
+            type:"CALCULATE",
+        });
+    }
+
+
     const clear=()=>{
         dispatch({
             type:"CLEAR"
@@ -34,5 +48,7 @@ export default function useCalculator(){
         clear,
         backspace,
         inputNumber,
+        inputOpretator,
+        calculate,
     }
 }
