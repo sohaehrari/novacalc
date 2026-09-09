@@ -1,7 +1,4 @@
-import CalculatorButtons from "./CalculatorButtons"
-
-
-
+import CalculatorButtons from "./CalculatorButtons";
 
 const buttons = [
   { label: "AC", type: "clear" },
@@ -26,7 +23,7 @@ const buttons = [
 
   { label: "0", type: "number" },
   { label: ".", type: "decimal" },
-  { label: "=", type: "equals" },
+  { label: "=", type: "equals", wide: true },
 ];
 
 export default function Keypad({
@@ -35,37 +32,36 @@ export default function Keypad({
   onBackspace,
   onOperator,
   onDecimal,
-  onEquals,
+  onCalculate,
 }) {
   const handleButtonClick = (button) => {
-    if (button.type === "number") {
-      onNumber(button.label);
-      return;
-    }
+    switch (button.type) {
+      case "number":
+        onNumber(button.label);
+        break;
 
-    if (button.type === "clear") {
-      onClear();
-      return;
-    }
+      case "clear":
+        onClear();
+        break;
 
-    if (button.type === "backspace") {
-      onBackspace();
-      return;
-    }
+      case "backspace":
+        onBackspace();
+        break;
 
-    if (button.type === "operator") {
-      onOperator(button.label);
-      return;
-    }
+      case "operator":
+        onOperator(button.label);
+        break;
 
-    if (button.type === "decimal") {
-      onDecimal();
-      return;
-    }
+      case "decimal":
+        onDecimal();
+        break;
 
-    if (button.type === "equals") {
-      onEquals();
-      return;
+      case "equals":
+        onCalculate();
+        break;
+
+      default:
+        break;
     }
   };
 
@@ -74,28 +70,11 @@ export default function Keypad({
       {buttons.map((button, index) => (
         <CalculatorButtons
           key={`${button.label}-${index}`}
-          type="button"
+          label={button.label}
+          type={button.type}
+          wide={button.wide}
           onClick={() => handleButtonClick(button)}
-          className={`
-            flex h-14 items-center justify-center
-            rounded-2xl
-            border border-white/5
-            bg-white/[0.05]
-            text-sm font-medium
-            text-zinc-200
-            transition duration-200
-            hover:bg-white/10
-            active:scale-[0.97]
-
-            ${
-              button.type === "equals"
-                ? "col-span-2 bg-indigo-500 text-white hover:bg-indigo-400"
-                : ""
-            }
-          `}
-        >
-          {button.label}
-        </CalculatorButtons>
+        />
       ))}
     </div>
   );
