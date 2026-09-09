@@ -9,6 +9,8 @@ export default function Calculator() {
     state,
     inputNumber,
     clear,
+    inputOperator,
+    calculate,
     backspace,
   } = useCalculator();
 
@@ -28,6 +30,9 @@ export default function Calculator() {
           <div className="p-4 sm:p-5">
             <Keypad
               onNumber={inputNumber}
+              onOperator={inputOperator}
+              onCalculate={calculate}
+
               onClear={clear}
               onBackspace={backspace}
             />
