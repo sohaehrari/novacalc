@@ -10,7 +10,6 @@ export default function Calculator() {
     inputNumber,
     clear,
     inputOperator,
-    inputDecimal,
     calculate,
     backspace,
   } = useCalculator();
@@ -30,7 +29,6 @@ export default function Calculator() {
               onClear={clear}
               onBackspace={backspace}
               onOperator={inputOperator}
-              onDecimal={inputDecimal}
               onCalculate={calculate}
             />
           </div>

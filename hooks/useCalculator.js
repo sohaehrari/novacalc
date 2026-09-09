@@ -17,7 +17,7 @@ export default function useCalculator(){
         });
     }
 
-    const inputOpretator=(operator)=>{
+    const inputOperator=(operator)=>{
         dispatch({
             type:"INPUT_OPERATOR",
             payload:operator
@@ -48,7 +48,7 @@ export default function useCalculator(){
         clear,
         backspace,
         inputNumber,
-        inputOpretator,
+        inputOperator,
         calculate,
     }
 }

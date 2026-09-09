@@ -1,9 +1,9 @@
 import CalculatorButtons from "./CalculatorButtons";
 
 const buttons = [
-  { label: "AC", type: "clear" },
-  { label: "⌫", type: "backspace" },
-  { label: "%", type: "operator" },
+  { label: "AC", type: "action" },
+  { label: "⌫", type: "action" },
+  { label: "%", type: "action" },
   { label: "÷", type: "operator" },
 
   { label: "7", type: "number" },
@@ -21,47 +21,50 @@ const buttons = [
   { label: "3", type: "number" },
   { label: "+", type: "operator" },
 
-  { label: "0", type: "number" },
-  { label: ".", type: "decimal" },
+  { label: "0", type: "number", wide: true },
   { label: "=", type: "equals", wide: true },
 ];
 
 export default function Keypad({
-  onClear,
   onNumber,
-  onBackspace,
   onOperator,
-  onDecimal,
   onCalculate,
+  onClear,
+  onBackspace,
 }) {
+  // Maps calculator buttons to calculator actions
   const handleButtonClick = (button) => {
-    switch (button.type) {
-      case "number":
-        onNumber(button.label);
-        break;
+    // Numbers
+    if (button.type === "number") {
+      onNumber(button.label);
+      return;
+    }
 
-      case "clear":
+    // Action buttons
+    if (button.type === "action") {
+      if (button.label === "AC") {
         onClear();
-        break;
+        return;
+      }
 
-      case "backspace":
+      if (button.label === "⌫") {
         onBackspace();
-        break;
+        return;
+      }
 
-      case "operator":
-        onOperator(button.label);
-        break;
+     
+    }
 
-      case "decimal":
-        onDecimal();
-        break;
+    // Operators
+    if (button.type === "operator") {
+      onOperator(button.label);
+      return;
+    }
 
-      case "equals":
-        onCalculate();
-        break;
-
-      default:
-        break;
+    // Equals
+    if (button.type === "equals") {
+      onCalculate();
+      return;
     }
   };
 
