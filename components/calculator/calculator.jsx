@@ -14,7 +14,7 @@ export default function Calculator() {
     calculate,
     backspace,
   } = useCalculator();
-  useKeyboard=({
+  useKeyboard({
 onNumber:inputNumber,
 onOperator:inputOperator,
 onCalculate:calculate,
