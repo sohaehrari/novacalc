@@ -1,9 +1,15 @@
+
+
+
+"use client";
+
 import HistoryItem from "./HistoryItem";
 
-export default function History({ history = [], onSelect }) {
+export default function History({ history = [], onClear }) {
+  // Renders persistent calculation history with a clear action and an informative empty state
   return (
     <section className="w-full max-w-md">
-      <div className="mb-4 flex items-end justify-between">
+      <div className="mb-5 flex items-end justify-between gap-4">
         <div>
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-indigo-400">
             Activity
@@ -15,10 +21,13 @@ export default function History({ history = [], onSelect }) {
         </div>
 
         {history.length > 0 && (
-          <span className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-zinc-500">
-            {history.length}{" "}
-            {history.length === 1 ? "calculation" : "calculations"}
-          </span>
+          <button
+            type="button"
+            onClick={onClear}
+            className="rounded-xl border border-white/10 bg-white/[0.035] px-3 py-2 text-xs font-medium text-zinc-500 transition-all duration-200 hover:border-red-400/20 hover:bg-red-500/[0.08] hover:text-red-300 active:scale-95"
+          >
+            Clear all
+          </button>
         )}
       </div>
 
@@ -38,14 +47,16 @@ export default function History({ history = [], onSelect }) {
         </div>
       ) : (
         <div className="space-y-2.5">
-          {history.map((item, index) => (
-            <HistoryItem
-              key={`${item.expression}-${index}`}
-              expression={item.expression}
-              result={item.result}
-              onSelect={() => onSelect?.(item)}
-            />
-          ))}
+          {history
+            .slice()
+            .reverse()
+            .map((item, index) => (
+              <HistoryItem
+                key={`${item.expression}-${item.result}-${index}`}
+                expression={item.expression}
+                result={item.result}
+              />
+            ))}
         </div>
       )}
     </section>
