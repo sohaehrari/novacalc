@@ -1,6 +1,7 @@
 "use client";
 
 import useCalculator from "@/hooks/useCalculator";
+import useKeyboard from "@/hooks/useKeyboard";
 import Display from "./Display";
 import Keypad from "./Keypad";
 
@@ -13,6 +14,13 @@ export default function Calculator() {
     calculate,
     backspace,
   } = useCalculator();
+  useKeyboard=({
+onNumber:inputNumber,
+onOperator:inputOperator,
+onCalculate:calculate,
+onClear:clear,
+onBackspace:backspace,
+  })
 
   return (
     <section className="mx-auto w-full max-w-md">
