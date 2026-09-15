@@ -107,77 +107,8 @@ return(
           </div>
 
           {/* Calculator Preview */}
-          <div className="relative">
-            <div className="absolute -inset-10 -z-10 bg-indigo-500/10 blur-3xl" />
-
-            <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-5 shadow-2xl shadow-indigo-500/10 backdrop-blur">
-              <div className="rounded-2xl border border-white/10 bg-zinc-900 p-6">
-                {/* Calculator Header */}
-                <div className="mb-8 flex items-center justify-between">
-                  <div>
-                    <p className="text-sm text-zinc-500">Calculator</p>
-                    <h2 className="text-lg font-medium">Standard</h2>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <span className="h-3 w-3 rounded-full bg-red-400/80" />
-                    <span className="h-3 w-3 rounded-full bg-yellow-400/80" />
-                    <span className="h-3 w-3 rounded-full bg-green-400/80" />
-                  </div>
-                </div>
-
-                {/* Display */}
-                <div className="mb-5 rounded-2xl border border-white/10 bg-zinc-950 p-6 text-right">
-                  <p className="text-sm text-zinc-500">12 × 8 + 24</p>
-                  <p className="mt-2 text-4xl font-semibold">120</p>
-                </div>
-
-                {/* Fake Buttons */}
-                <div className="grid grid-cols-4 gap-3">
-                  {[
-                    "AC",
-                    "⌫",
-                    "%",
-                    "÷",
-                    "7",
-                    "8",
-                    "9",
-                    "×",
-                    "4",
-                    "5",
-                    "6",
-                    "−",
-                    "1",
-                    "2",
-                    "3",
-                    "+",
-                    "0",
-                    ".",
-                    "=",
-                  ].map((button, index) => (
-                    <button
-                      key={index}
-                      className={`rounded-xl border border-white/10 p-4 text-sm transition ${
-                        button === "="
-                          ? "bg-indigo-500 text-white hover:bg-indigo-400"
-                          : button === "+" ||
-                              button === "−" ||
-                              button === "×" ||
-                              button === "÷"
-                            ? "bg-white/10 text-indigo-300 hover:bg-white/15"
-                            : "bg-white/[0.03] text-zinc-300 hover:bg-white/10"
-                      } ${button === "0" ? "col-span-2" : ""}`}
-                    >
-                      {button}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
-
+        </section>
       {/* Features */}
       <section
         id="features"

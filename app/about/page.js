@@ -386,7 +386,7 @@ export default function AboutPage() {
 
           <div className="flex items-center gap-5">
             <Link
-              href="/"
+              href="/calculator"
               className="transition hover:text-white"
             >
               Calculator
