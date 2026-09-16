@@ -5,6 +5,7 @@ import useKeyboard from "@/hooks/useKeyboard";
 import Display from "./Display";
 import Keypad from "./Keypad";
 
+
 export default function Calculator() {
   const {
     state,
