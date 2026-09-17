@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+✨ NovaCalc — Modern Calculator & Conversion Suite
+<div align="center">
+🧮 More Than a Calculator — A Complete Calculation Experience
+NovaCalc is a modern, responsive, and feature-rich calculation platform built with Next.js and designed to provide a smooth, elegant, and intuitive experience for everyday and advanced calculations.
 
-## Getting Started
+<br /> <a href="https://sohaehrari-novacalc.vercel.app/"> <img src="https://img.shields.io/badge/🚀_Live_Demo-NovaCalc-000000?style=for-the-badge" alt="Live Demo" /> </a>
+<br /><br />
 
-First, run the development server:
+<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" /> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/Responsive-Design-6366F1?style=for-the-badge" /> </div>
+🌟 Overview
+NovaCalc is a next-generation web-based calculation workspace created to bring multiple useful calculation tools together in one polished application.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Instead of being limited to a traditional calculator, NovaCalc provides a collection of tools for mathematics, conversions, percentages, currencies, health calculations, and calculation history.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project focuses not only on functionality, but also on creating a clean, responsive, and enjoyable user experience.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Calculate. Convert. Explore. Simplify.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 Live Demo
+Experience NovaCalc live:
 
-## Learn More
+🔗 Open NovaCalc
+✨ Features
+NovaCalc includes a collection of powerful tools organized into a modern and responsive interface.
 
-To learn more about Next.js, take a look at the following resources:
+🧮 Standard Calculator
+A clean calculator for everyday mathematical operations.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Addition
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Subtraction
 
-## Deploy on Vercel
+Multiplication
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Division
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Decimal calculations
+
+Clear and delete operations
+
+Keyboard-friendly interaction
+
+🔬 Scientific Calculator
+For more advanced mathematical calculations.
+
+Trigonometric functions
+
+Logarithmic functions
+
+Powers
+
+Square roots
+
+Parentheses
+
+Advanced mathematical operations
+
+Degree/radian calculations
+
+📊 Percentage Calculator
+Quickly solve common percentage-related problems.
+
+Percentage of a number
+
+Percentage increase
+
+Percentage decrease
+
+Discount calculations
+
+Difference calculations
+
+🔄 Unit Converter
+Convert values between different measurement systems
